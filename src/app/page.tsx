@@ -1,11 +1,12 @@
 import { ArrowDown } from "lucide-react";
+import Link from "next/link";
 
-import { Particles } from "@/components";
+import { HomeScrollDetection } from "@/components";
 
 export default function Home() {
   return (
     <main className="w-screen h-screen flex flex-col justify-center items-center gap-8">
-      <Particles />
+      <HomeScrollDetection />
       <div className="flex flex-col justify-center items-center gap-2">
         <h1 className="text-5xl font-light text-slate-200 animate-move-in-left">
           Hello, I'm <span className="text-teal-400 font-normal">José</span>.
@@ -14,8 +15,9 @@ export default function Home() {
           I'm a full stack web engineer.
         </h2>
       </div>
-      <button
-        className="flex items-center justify-center gap-2 border-2 
+      <Link href="/know-me">
+        <button
+          className="flex items-center justify-center gap-2 border-2 
         border-teal-400 text-teal-400 text-xl rounded-sm h-12 w-54 font-light
         animate-move-in-bottom hover:cursor-pointer z-2 hover:h-13 hover:w-55 hover:font-medium
         before:h-12 before:w-54 before:absolute before:border-teal-400 before:border-2 
@@ -25,11 +27,12 @@ export default function Home() {
         after:rounded-sm hover:after:transition-all hover:after:delay-100 
         hover:after:duration-400 hover:after:scale-130
         hover:after:scale-y-160 hover:after:blur-xs hover:after:border-transparent"
-        type="button"
-      >
-        Get to know me
-        <ArrowDown size={24} />
-      </button>
+          type="button"
+        >
+          Get to know me
+          <ArrowDown size={24} />
+        </button>
+      </Link>
     </main>
   );
 }

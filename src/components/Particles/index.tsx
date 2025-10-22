@@ -1,6 +1,6 @@
 "use client";
 
-import type { Container, ISourceOptions } from "@tsparticles/engine";
+import type { ISourceOptions } from "@tsparticles/engine";
 import ParticlesExternal, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useMemo, useState } from "react";
@@ -81,18 +81,8 @@ export const Particles = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container) => {
-    console.log(container);
-  };
-
   if (init) {
-    return (
-      <ParticlesExternal
-        id="particles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
+    return <ParticlesExternal id="particles" options={options} />;
   }
 
   return <></>;
