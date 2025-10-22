@@ -45,9 +45,7 @@ export default function KnowMeLayout({
             </SocialButton>
           </div>
         </section>
-        <section className="animate-slide-in-bottom h-full w-full">
-          {children}
-        </section>
+        <section className="h-full w-full">{children}</section>
       </main>
     </div>
   );
