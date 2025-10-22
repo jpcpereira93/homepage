@@ -1,44 +1,38 @@
-import { Github, Linkedin } from "lucide-react";
-import Image from "next/image";
-
-import { SocialButton } from "@/components";
-
 export default function KnowMe() {
   return (
-    <main className="w-screen h-screen px-30 py-10">
-      <div
-        className="animate-slide-in-bottom h-full lg:w-sm w-full bg-zinc-800 
-      rounded-xl py-10 flex flex-col items-center gap-6"
-      >
-        <div className="rounded-xl overflow-hidden">
-          <Image
-            src="/img/me.jpeg"
-            height={250}
-            width={250}
-            alt="José Pereira photo"
-            priority
-          />
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <h1 className="text-4xl text-slate-200 font-extrabold tracking-tight">
-            José Pereira
-          </h1>
-          <h2 className="text-xl tracking-tighter text-slate-300">
-            Full Stack Web Engineer
-          </h2>
-          <h2 className="text-xl tracking-tighter text-slate-300">
-            Porto, Portugal
-          </h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <SocialButton href="https://github.com/jpcpereira93">
-            <Github size={20} />
-          </SocialButton>
-          <SocialButton href="https://www.linkedin.com/in/jos%C3%A9-pereira-437104139">
-            <Linkedin size={20} />
-          </SocialButton>
-        </div>
+    <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-10">
+        <h1 className="text-4xl font-light">
+          I believe in a user centered development approach, ensuring that every
+          project I work on is tailored to meet the specific needs of its users.
+        </h1>
+        <p>This is me.</p>
       </div>
-    </main>
+      <span className="h-px w-full bg-teal-400 opacity-20"></span>
+      <div className="flex">
+        <h1 className="w-2/5 text-5xl">Hi, I'm José.</h1>
+        <p className="w-3/5 font-light">
+          I'm a Full Stack Web Engineer dedicated to turning ideas into creative
+          solutions. I specialize in creating seamless and intuitive user
+          experiences.
+          <br />
+          <br />
+          I'm passionate about creating pixel-perfect experiences that not only
+          look great but are meticulously built for scalability and
+          high-performance. (I hate loading screens!)
+          <br />
+          <br />
+          With 8+ years of experience, I've had the opportunity to develop
+          software across a variety of settings — from old school software
+          houses and new-gen large corporations to start-ups and single-person
+          digital products.
+          <br />
+          <br />
+          In my spare time, I’m usually hitting the gym, watching Anime, hanging
+          out with my girlfriend and two cats, or immersed in multi-player
+          online video games.
+        </p>
+      </div>
+    </div>
   );
 }
