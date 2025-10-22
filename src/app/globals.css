@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --animate-move-in-left: move-in-left 1.4s cubic-bezier(0.21, 1.11, 0.81, 0.99);
+  --animate-move-in-right: move-in-right 1.4s
+    cubic-bezier(0.21, 1.11, 0.81, 0.99);
+
+  @keyframes move-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes move-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
