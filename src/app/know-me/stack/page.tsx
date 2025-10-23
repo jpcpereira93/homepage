@@ -24,7 +24,7 @@ const FRONTEND: ITechStackItem[] = [
 
 const TESTING: ITechStackItem[] = [
   { name: "Jest", logo: "jest.png" },
-  { name: "Vitest", logo: "vitest.png" },
+  { name: "Vitest", logo: "vitest.svg" },
 ];
 
 const DATABASE: ITechStackItem[] = [

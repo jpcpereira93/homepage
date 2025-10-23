@@ -21,7 +21,7 @@ export const useIntersectionObserver = (
         currentY.current = entry.boundingClientRect.y;
       },
       {
-        threshold: [0, 0.25, 0.5, 0.75, 1],
+        threshold: 0.5,
       },
     );
 
