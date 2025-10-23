@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import React, { useRef } from "react";
+
 import { useIntersectionObserver } from "@/hooks";
+import { getImagePath } from "@/utils";
 
 interface TechStackItemProps {
   logo: string;
@@ -28,7 +30,7 @@ const TechStackItem = ({ logo, name }: TechStackItemProps) => {
       >
         <Image
           alt={name}
-          src={`/logos/${logo}`}
+          src={getImagePath(`/logos/${logo}`)}
           height={35}
           width={35}
           priority

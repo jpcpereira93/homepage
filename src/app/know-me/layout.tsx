@@ -2,6 +2,7 @@ import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 import { NavBar, SocialButton } from "@/components";
+import { getImagePath } from "@/utils";
 
 export default function KnowMeLayout({
   children,
@@ -19,7 +20,7 @@ export default function KnowMeLayout({
           >
             <div className="rounded-xl overflow-hidden">
               <Image
-                src={(process.env.PAGES_BASE_PATH ?? "") + "/img/me.jpeg"}
+                src={getImagePath("/img/me.jpeg")}
                 height={220}
                 width={220}
                 alt="José Pereira photo"
