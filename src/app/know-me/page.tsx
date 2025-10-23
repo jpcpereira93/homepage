@@ -1,7 +1,7 @@
 export default function KnowMe() {
   return (
-    <div className="animate-slide-in-bottom flex flex-col gap-5">
-      <div className="flex flex-col gap-10">
+    <div className="animate-slide-in-bottom flex flex-col gap-5 text-justify">
+      <div className="flex flex-col gap-7">
         <h1 className="text-4xl font-light">
           I believe in a user centered development approach, ensuring that every
           project I work on is tailored to meet the specific needs of its users.
