@@ -19,7 +19,7 @@ export default function KnowMeLayout({
           >
             <div className="rounded-xl overflow-hidden">
               <Image
-                src="/img/me.jpeg"
+                src="/homepage/img/me.jpeg"
                 height={220}
                 width={220}
                 alt="José Pereira photo"
