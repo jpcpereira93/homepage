@@ -28,9 +28,9 @@ export const NavBar = () => {
       >
         <Briefcase />
       </NavButton>
-      <NavButton active={selectedSection === "contact"} href="/know-me/contact">
+      {/* <NavButton active={selectedSection === "contact"} href="/know-me/contact">
         <Mail />
-      </NavButton>
+      </NavButton> */}
     </nav>
   );
 };
