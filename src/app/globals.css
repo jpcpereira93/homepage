@@ -8,6 +8,10 @@
     cubic-bezier(0.21, 1.11, 0.81, 0.99);
   --animate-slide-in-bottom: move-in-bottom 1s
     cubic-bezier(0.21, 1.11, 0.81, 0.99);
+  --animate-slide-in-left: slide-in-left 1s
+    cubic-bezier(0.21, 1.11, 0.81, 0.99);
+    --animate-slide-in-right: slide-in-right 1s
+    cubic-bezier(0.21, 1.11, 0.81, 0.99);
   --animate-slide-in-top: move-in-top 1s cubic-bezier(0.21, 1.11, 0.81, 0.99);
 
   @keyframes move-in-bottom {
@@ -47,6 +51,28 @@
     0% {
       opacity: 0;
       transform: translateX(10rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-2rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(2rem);
     }
     100% {
       opacity: 1;
