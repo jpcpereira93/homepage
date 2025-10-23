@@ -7,10 +7,18 @@ export interface NavButtonProps {
   active?: boolean;
   children: ReactNode;
   href: string;
+  tooltip?: string;
 }
 
-export const NavButton = ({ active, children, href }: NavButtonProps) => (
-  <IconButton active={active}>
-    <Link href={href}>{children}</Link>
-  </IconButton>
+export const NavButton = ({
+  active,
+  children,
+  href,
+  tooltip,
+}: NavButtonProps) => (
+  <>
+    <IconButton active={active} tooltip={tooltip}>
+      <Link href={href}>{children}</Link>
+    </IconButton>
+  </>
 );

@@ -16,19 +16,24 @@ export const NavBar = () => {
       className="sticky left-0 right-0 top-0 mx-auto z-50 animate-slide-in-bottom w-fit 
         bg-zinc-800 rounded-xl flex items-center justify-center px-4 py-2 gap-2"
     >
-      <NavButton active={!selectedSection} href="/know-me">
+      <NavButton active={!selectedSection} href="/know-me" tooltip="About">
         <Home />
       </NavButton>
-      <NavButton active={selectedSection === "stack"} href="/know-me/stack">
+      <NavButton
+        active={selectedSection === "stack"}
+        href="/know-me/stack"
+        tooltip="Stack"
+      >
         <Wrench />
       </NavButton>
       <NavButton
         active={selectedSection === "experience"}
         href="/know-me/experience"
+        tooltip="Experience"
       >
         <Briefcase />
       </NavButton>
-      {/* <NavButton active={selectedSection === "contact"} href="/know-me/contact">
+      {/* <NavButton active={selectedSection === "contact"} href="/know-me/contact" tooltip="Contact me">
         <Mail />
       </NavButton> */}
     </nav>
