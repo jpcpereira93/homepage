@@ -1,9 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-
-import { useIntersectionObserver } from "@/app/hooks";
 import TechStackItem from "@/components/TechStackItem";
+import { useIntersectionObserver } from "@/hooks";
 import type { ITechStackItem } from "@/models";
 
 interface TechStackProps {

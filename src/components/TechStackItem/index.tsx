@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useRef } from "react";
-import { useIntersectionObserver } from "@/app/hooks";
+import { useIntersectionObserver } from "@/hooks";
 
 interface TechStackItemProps {
   logo: string;
