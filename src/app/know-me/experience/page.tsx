@@ -118,12 +118,13 @@ export default function Experience() {
   return (
     <ul>
       {PROFESSIONAL_EXPERIENCE.map(
-        ({ company, description, endDate, role, startDate, tech }) => (
+        ({ company, description, endDate, role, startDate, tech }, index) => (
           <li key={`${startDate}-${endDate}`}>
             <ProfessionalExperienceItem
               company={company}
               description={description}
               endDate={endDate}
+              first={index === 0}
               role={role}
               startDate={startDate}
               tech={tech}
