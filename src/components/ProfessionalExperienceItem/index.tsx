@@ -51,9 +51,9 @@ export const ProfessionalExperienceItem = ({
     ${index === 0 ? "" : "before:absolute before:top-0 before:left-20 before:h-5 before:w-px before:bg-teal-300/30 hover:before:bg-teal-300/60"}
     after:absolute after:top-15 after:bottom-0 after:left-20 after:w-px after:bg-teal-300/30 hover:after:bg-teal-300/60`}
     >
-      <div className="h-10 w-50 flex items-center">
+      <div className="h-10 w-60 flex items-center">
         <p className="uppercase text-sm font-medium tracking-tight text-slate-500">
-          {startDate} - {endDate}
+          {startDate} — {endDate}
         </p>
       </div>
       <div className="w-full flex flex-col flex-wrap gap-4">

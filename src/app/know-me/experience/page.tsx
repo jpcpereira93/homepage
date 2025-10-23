@@ -5,7 +5,7 @@ const PROFESSIONAL_EXPERIENCE: IProfessionalExperienceItem[] = [
   {
     company: "Wellhub",
     description: `Build and maintain critical components used in the Wellhub billing platform, both on Frontend and Backend (BFF). Work closely with cross-functional teams including frontend and backend developers, designers and product managers, to implement features with best practices in software architecture and development.`,
-    endDate: "Present",
+    endDate: "Oct 2025",
     role: "Senior Front End Software Engineer",
     startDate: "Apr 2025",
     tech: [
