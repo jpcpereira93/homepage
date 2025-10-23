@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body
-        className={`${inter.className} antialiased bg-neutral-900 text-slate-400`}
+        className={`${inter.className} antialiased bg-neutral-900 text-slate-400 selection:bg-teal-400 selection:text-neutral-800`}
       >
         <Particles />
         {children}

@@ -54,3 +54,7 @@
     }
   }
 }
+
+body {
+  scrollbar-color: var(--color-zinc-800) transparent;
+}
