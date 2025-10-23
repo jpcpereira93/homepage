@@ -19,7 +19,7 @@ export default function KnowMeLayout({
           >
             <div className="rounded-xl overflow-hidden">
               <Image
-                src="/homepage/img/me.jpeg"
+                src={(process.env.PAGES_BASE_PATH ?? "") + "/img/me.jpeg"}
                 height={220}
                 width={220}
                 alt="José Pereira photo"
