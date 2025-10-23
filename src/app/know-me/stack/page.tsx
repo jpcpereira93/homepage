@@ -1,44 +1,45 @@
-import { TechStack } from "@/components/TechStack";
+import { TechStack } from "@/components";
 import type { ITechStackItem } from "@/models";
+import { getImagePath } from "@/utils";
 
 const BACKEND: ITechStackItem[] = [
-  { name: "Node.Js", logo: "node.png" },
-  { name: "NestJS", logo: "nest.svg" },
-  { name: "Express.Js", logo: "express.png" },
-  { name: "Koa.Js", logo: "koajs.png" },
-  { name: "Python", logo: "python.png" },
+  { name: "Node.Js", logo: getImagePath("/logos/node.png") },
+  { name: "NestJS", logo: getImagePath("/logos/nest.svg") },
+  { name: "Express.Js", logo: getImagePath("/logos/express.png") },
+  { name: "Koa.Js", logo: getImagePath("/logos/koajs.png") },
+  { name: "Python", logo: getImagePath("/logos/python.png") },
 ];
 
 const FRONTEND: ITechStackItem[] = [
-  { name: "JavaScript", logo: "javascript.png" },
-  { name: "TypeScript", logo: "typescript.png" },
-  { name: "React", logo: "react.png" },
-  { name: "Angular", logo: "angular.png" },
-  { name: "Next.Js", logo: "nextjs.png" },
-  { name: "Redux", logo: "redux.png" },
-  { name: "HTML", logo: "html.png" },
-  { name: "CSS", logo: "css.png" },
-  { name: "Sass", logo: "sass.png" },
-  { name: "GraphQL", logo: "graphql.png" },
+  { name: "JavaScript", logo: getImagePath("/logos/javascript.png") },
+  { name: "TypeScript", logo: getImagePath("/logos/typescript.png") },
+  { name: "React", logo: getImagePath("/logos/react.png") },
+  { name: "Angular", logo: getImagePath("/logos/angular.png") },
+  { name: "Next.Js", logo: getImagePath("/logos/nextjs.png") },
+  { name: "Redux", logo: getImagePath("/logos/redux.png") },
+  { name: "HTML", logo: getImagePath("/logos/html.png") },
+  { name: "CSS", logo: getImagePath("/logos/css.png") },
+  { name: "Sass", logo: getImagePath("/logos/sass.png") },
+  { name: "GraphQL", logo: getImagePath("/logos/graphql.png") },
 ];
 
 const TESTING: ITechStackItem[] = [
-  { name: "Jest", logo: "jest.png" },
-  { name: "Vitest", logo: "vitest.svg" },
+  { name: "Jest", logo: getImagePath("/logos/jest.png") },
+  { name: "Vitest", logo: getImagePath("/logos/vitest.svg") },
 ];
 
 const DATABASE: ITechStackItem[] = [
-  { name: "MySQL", logo: "mysql.svg" },
-  { name: "PostreSQL", logo: "postgres.png" },
-  { name: "MongoDB", logo: "mongodb.png" },
+  { name: "MySQL", logo: getImagePath("/logos/mysql.svg") },
+  { name: "PostreSQL", logo: getImagePath("/logos/postgres.png") },
+  { name: "MongoDB", logo: getImagePath("/logos/mongodb.png") },
 ];
 
 const TOOLS: ITechStackItem[] = [
-  { name: "Git", logo: "git.png" },
-  { name: "Docker", logo: "docker.svg" },
-  { name: "Kubernetes", logo: "kubernetes.png" },
-  { name: "Terraform", logo: "terraform.png" },
-  { name: "Google Cloud Platform", logo: "gcp.png" },
+  { name: "Git", logo: getImagePath("/logos/git.png") },
+  { name: "Docker", logo: getImagePath("/logos/docker.svg") },
+  { name: "Kubernetes", logo: getImagePath("/logos/kubernetes.png") },
+  { name: "Terraform", logo: getImagePath("/logos/terraform.png") },
+  { name: "Google Cloud Platform", logo: getImagePath("/logos/gcp.png") },
 ];
 
 export default function Stack() {

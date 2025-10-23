@@ -6,3 +6,4 @@ export * from "./Particles";
 export * from "./Pill";
 export * from "./ProfessionalExperienceItem";
 export * from "./SocialButton";
+export * from "./TechStack";
