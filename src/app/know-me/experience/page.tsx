@@ -124,7 +124,7 @@ export default function Experience() {
               company={company}
               description={description}
               endDate={endDate}
-              first={index === 0}
+              index={index}
               role={role}
               startDate={startDate}
               tech={tech}
