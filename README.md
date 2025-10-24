@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Welcome to My Personal Webpage!
+
+[![Next.js](https://img.shields.io/badge/NextJs-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](https://react.dev/)
+[![Bun](https://img.shields.io/badge/-Bun-000000?style=flat&logo=bun&logoColor=white)](https://bun.sh/)
+[![Vitest](https://img.shields.io/badge/-Vitest-6E9F18?style=flat&logo=vitest&logoColor=white)](https://vitest.dev/)
+[![React Testing Library](https://img.shields.io/badge/-Testing%20Library-E33332?style=flat&logo=testinglibrary&logoColor=white)](https://testing-library.com/docs/react-testing-library/intro/)
+[![Biome](https://img.shields.io/badge/-Biome-60A5FA?style=flat&logo=biome&logoColor=white)](https://biomejs.dev)
+
+A modern, production-ready personal webpage using Next.js with Bun. This project had 2 main goals:
+- Get people to know more about me & showcase my professional experience/stack
+- Improve some concepts in Next.js and TailwindCSS, something I didn't had opportunity to work recently
+- Build a modern, responsive, eye-catching (subject to personal taste!) static website, something I love to do and don't have many opportunities to do so.
+
+This project fully supports Next.js SSR and SSG features, it's currently using an exported build output, that only includes static HTML/CSS/JS since it's useful for self-hosting without a Node.js server in Github Pages.
+
+## Features
+
+- 🚀 Server-side rendering (w/ Bun!)
+- 📦 Asset bundling and optimization
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [Next.js docs](https://nextjs.org/)
+- 🧪 Vitest + React Testing Library for testing
+- 🔍 BiomeJS for code linting & formatting
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+This template uses [bun](https://bun.sh/) as the package manager and Javascript Runtime. So, you need to install `bun` globally:
+
+  ```bash
+  curl -fsSL https://bun.sh/install | bash
+  ```
+
+### Installation
+
+Install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
+```
+
+### Development
+
+Start the development server with HMR:
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your application will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a production build:
 
-## Learn More
+```bash
+bun run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This repo includes a github action workflow to automatically deploy the project to Github Pages when a push is made on the main branch. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Linting & Formatting
 
-## Deploy on Vercel
+[Biome](https://biomejs.dev/) is used to ensure code consistency across the project. It is already included a config file with the default + recommended options to enable when using this setup. Feel free to change it to your liking!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run all the biome checks (linting and formatting):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+bun biome check
+```
+
+To automatically fix linting issues and format code:
+
+```bash
+bun biome check --write
+```
+
+## Testing
+
+This template uses [Vitest](https://vitest.dev/) as the testing framework and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for component testing. There's also included a basic setup with recommended settings.
+
+To run the tests, use the following command:
+
+```bash
+bun run test
+```
+
+This will run all the unit and integration tests.
+
+To watch and re-run tests on file changes during development:
+
+```bash
+bun run test:watch
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
