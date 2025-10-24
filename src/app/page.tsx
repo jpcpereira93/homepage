@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <main className="w-screen h-screen flex flex-col justify-center items-center gap-8">
       <HomeScrollDetection />
-      <div className="flex flex-col justify-center items-center gap-2">
-        <h1 className="text-5xl font-light text-slate-200 animate-move-in-left">
+      <div className="flex flex-col justify-center items-center gap-2 text-center">
+        <h1 className="text-3xl sm:text-5xl font-light text-slate-200 animate-move-in-left">
           Hello, I'm <span className="text-teal-400 font-normal">José</span>.
         </h1>
-        <h2 className="text-5xl font-light text-slate-200 animate-move-in-right">
+        <h2 className="text-3xl sm:text-5xl font-light text-slate-200 animate-move-in-right">
           I'm a full stack web engineer.
         </h2>
       </div>

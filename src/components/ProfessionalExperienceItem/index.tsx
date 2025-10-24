@@ -47,9 +47,9 @@ export const ProfessionalExperienceItem = ({
 
   return (
     <article
-      className={`animate-slide-in-bottom group relative flex flex-col lg:flex-row px-10 py-5 gap-2 lg:gap-8 rounded-xl hover:bg-neutral-800/50 
-    ${index === 0 ? "" : "before:absolute before:top-0 before:left-20 before:h-5 before:w-px before:bg-teal-300/30 hover:before:bg-teal-300/60"}
-    after:absolute after:top-15 after:bottom-0 after:left-20 after:w-px after:bg-teal-300/30 hover:after:bg-teal-300/60`}
+      className={`animate-slide-in-bottom group relative flex flex-col lg:flex-row sm:px-10 py-5 sm:gap-2 lg:gap-8 rounded-xl hover:bg-neutral-800/50 
+    ${index === 0 ? "" : "sm:before:absolute sm:before:top-0 sm:before:left-20 sm:before:h-5 sm:before:w-px sm:before:bg-teal-300/30 sm:hover:before:bg-teal-300/60"}
+    sm:after:absolute sm:after:top-15 sm:after:bottom-0 sm:after:left-20 sm:after:w-px sm:after:bg-teal-300/30 sm:hover:after:bg-teal-300/60`}
     >
       <div className="h-10 w-60 flex items-center">
         <p className="uppercase text-sm font-medium tracking-tight text-slate-500">
@@ -57,7 +57,7 @@ export const ProfessionalExperienceItem = ({
         </p>
       </div>
       <div className="w-full flex flex-col flex-wrap gap-4">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-2 sm:gap-0">
           <div className="h-10 flex items-center">
             <h5 className="text-lg font-medium tracking-tight text-slate-300 group-hover:text-teal-300">
               {role} · {company}

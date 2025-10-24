@@ -16,8 +16,8 @@ export const TechStack = ({ items, label }: TechStackProps) => {
   const [isVisible, isScrollDown] = useIntersectionObserver(containerRef);
 
   return (
-    <div className="flex">
-      <div className="w-2/5">
+    <div className="flex flex-col sm:flex-row gap-5 sm:gap-0">
+      <div className="w-full sm:w-2/5">
         <h1
           ref={containerRef}
           className={`text-4xl uppercase tracking-tighter font-extrabold ${
@@ -31,7 +31,7 @@ export const TechStack = ({ items, label }: TechStackProps) => {
           {label}
         </h1>
       </div>
-      <div className="w-3/5 flex flex-wrap items-center gap-10">
+      <div className="w-full sm:w-3/5 flex flex-wrap items-center gap-8 sm:gap-10">
         {items.map(({ logo, name }) => (
           <TechStackItem key={name} logo={logo} name={name} />
         ))}

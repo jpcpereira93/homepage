@@ -10,10 +10,10 @@ export default function KnowMeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative w-screen h-screen py-10 box-border overflow-scroll xl:overflow-hidden">
+    <div className="relative w-screen h-screen py-5 sm:py-10 box-border overflow-scroll xl:overflow-hidden">
       <NavBar />
-      <main className="h-full w-full box-border py-12 flex flex-col xl:flex-row gap-10">
-        <div className="px-30 xl:pr-0">
+      <main className="h-full w-full box-border py-6 sm:py-12 flex flex-col xl:flex-row gap-10">
+        <div className="px-5 sm:px-30 xl:pr-0">
           <section
             className="animate-slide-in-bottom h-full xl:w-sm w-full bg-zinc-800 
       rounded-xl py-10 flex flex-col items-center gap-6"
@@ -48,7 +48,7 @@ export default function KnowMeLayout({
             </div>
           </section>
         </div>
-        <section className="h-full w-full xl:overflow-scroll px-30 xl:pl-0">
+        <section className="h-full w-full xl:overflow-scroll px-5 sm:px-30 xl:pl-0">
           {children}
         </section>
       </main>

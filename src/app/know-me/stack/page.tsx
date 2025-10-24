@@ -44,7 +44,7 @@ const TOOLS: ITechStackItem[] = [
 
 export default function Stack() {
   return (
-    <div className="animate-slide-in-bottom flex flex-col gap-20 py-5">
+    <div className="animate-slide-in-bottom flex flex-col gap-10 sm:gap-20 py-2 sm:py-5">
       <TechStack items={FRONTEND} label="Frontend" />
       <TechStack items={BACKEND} label="Backend" />
       <TechStack items={TESTING} label="Testing" />
