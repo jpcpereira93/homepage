@@ -5,7 +5,9 @@ export const useIntersectionObserver = (
 ) => {
   const currentY = useRef(0);
 
-  const [intersectionInfo, setIntersectionInfo] = useState([false, true]);
+  const [intersectionInfo, setIntersectionInfo] = useState<
+    "outside" | "scroll-down" | "scroll-up"
+  >("outside");
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: Avoid re-rendering
   useEffect(() => {
@@ -13,12 +15,19 @@ export const useIntersectionObserver = (
       (entries) => {
         const [entry] = entries;
 
-        setIntersectionInfo([
-          entry.isIntersecting,
-          entry.boundingClientRect.y > currentY.current,
-        ]);
+        const { boundingClientRect, isIntersecting } = entry;
 
-        currentY.current = entry.boundingClientRect.y;
+        if (!isIntersecting) {
+          setIntersectionInfo("outside");
+        } else {
+          setIntersectionInfo(
+            boundingClientRect.y > currentY.current
+              ? "scroll-down"
+              : "scroll-up",
+          );
+        }
+
+        currentY.current = boundingClientRect.y;
       },
       {
         threshold: 0.5,

@@ -1,9 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
+
 import TechStackItem from "@/components/TechStackItem";
 import { useIntersectionObserver } from "@/hooks";
 import type { ITechStackItem } from "@/models";
+import { getStackAnimationFromIntersectionInfo } from "@/utils";
 
 interface TechStackProps {
   items: ITechStackItem[];
@@ -13,20 +15,19 @@ interface TechStackProps {
 export const TechStack = ({ items, label }: TechStackProps) => {
   const containerRef = useRef(null);
 
-  const [isVisible, isScrollDown] = useIntersectionObserver(containerRef);
+  const intersectionInfo = useIntersectionObserver(containerRef);
+
+  const getAnimationFromIntersectionInfo = useCallback(
+    () => getStackAnimationFromIntersectionInfo(intersectionInfo),
+    [intersectionInfo],
+  );
 
   return (
     <div className="flex flex-col sm:flex-row gap-5 sm:gap-0">
       <div className="w-full sm:w-2/5">
         <h1
           ref={containerRef}
-          className={`text-4xl uppercase tracking-tighter font-extrabold ${
-            isVisible
-              ? isScrollDown
-                ? "animate-slide-in-top"
-                : "animate-slide-in-bottom"
-              : "opacity-0"
-          }`}
+          className={`text-4xl uppercase tracking-tighter font-extrabold ${getAnimationFromIntersectionInfo()}`}
         >
           {label}
         </h1>
