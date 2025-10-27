@@ -1,6 +1,6 @@
 export default function KnowMe() {
   return (
-    <div className="flex flex-col gap-5 text-justify">
+    <div className="h-full w-full flex flex-col gap-5 text-justify xl:overflow-scroll px-5 sm:px-30 xl:pl-0">
       <div className="flex flex-col gap-7 animate-slide-in-top">
         <h1 className="text-2xl sm:text-4xl font-light">
           I believe in a user centered development approach, ensuring that every
@@ -8,7 +8,9 @@ export default function KnowMe() {
         </h1>
         <p>This is me.</p>
       </div>
-      <span className="h-px w-full bg-teal-400 opacity-20"></span>
+      <div className="flex">
+        <span className="h-px w-full bg-teal-400 opacity-20"></span>
+      </div>
       <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row animate-slide-in-right">
         <h1 className="w-full sm:w-2/5 text-2xl sm:text-5xl">Hi, I'm José.</h1>
         <p className="w-full sm:w-3/5 font-light">

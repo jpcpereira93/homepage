@@ -48,9 +48,7 @@ export default function KnowMeLayout({
             </div>
           </section>
         </div>
-        <section className="h-full w-full xl:overflow-scroll px-5 sm:px-30 xl:pl-0">
-          {children}
-        </section>
+        <section className="h-full w-full">{children}</section>
       </main>
     </div>
   );

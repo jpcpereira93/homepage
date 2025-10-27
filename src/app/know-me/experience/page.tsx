@@ -116,7 +116,7 @@ const PROFESSIONAL_EXPERIENCE: IProfessionalExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <ul>
+    <ul className="h-full xl:overflow-scroll px-5 sm:px-30 xl:pl-0">
       {PROFESSIONAL_EXPERIENCE.map(
         ({ company, description, endDate, role, startDate, tech }, index) => (
           <li key={`${startDate}-${endDate}`}>
