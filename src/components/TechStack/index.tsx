@@ -3,7 +3,7 @@
 import { useCallback, useRef } from "react";
 
 import TechStackItem from "@/components/TechStackItem";
-import { useDelayedEntry, useIntersectionObserver } from "@/hooks";
+import { useIntersectionObserver } from "@/hooks";
 import type { ITechStackItem } from "@/models";
 import { getStackAnimationFromIntersectionInfo } from "@/utils";
 
@@ -13,20 +13,15 @@ interface TechStackProps {
   label: string;
 }
 
-export const TechStack = ({ index, items, label }: TechStackProps) => {
+export const TechStack = ({ items, label }: TechStackProps) => {
   const containerRef = useRef(null);
 
   const intersectionInfo = useIntersectionObserver(containerRef);
-  const isVisible = useDelayedEntry(index * 200);
 
   const getAnimationFromIntersectionInfo = useCallback(
     () => getStackAnimationFromIntersectionInfo(intersectionInfo),
     [intersectionInfo],
   );
-
-  if (!isVisible) {
-    return null;
-  }
 
   return (
     <div className="flex flex-col sm:flex-row gap-5 sm:gap-0">
