@@ -7,7 +7,7 @@ export const useIntersectionObserver = (
 
   const [intersectionInfo, setIntersectionInfo] = useState<
     "outside" | "scroll-down" | "scroll-up"
-  >("outside");
+  >("scroll-down");
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: Avoid re-rendering
   useEffect(() => {

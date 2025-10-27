@@ -45,11 +45,11 @@ const TOOLS: ITechStackItem[] = [
 export default function Stack() {
   return (
     <div className="animate-slide-in-bottom flex flex-col gap-10 sm:gap-20 py-2 sm:py-5">
-      <TechStack items={FRONTEND} label="Frontend" />
-      <TechStack items={BACKEND} label="Backend" />
-      <TechStack items={TESTING} label="Testing" />
-      <TechStack items={DATABASE} label="Database" />
-      <TechStack items={TOOLS} label="Tools" />
+      <TechStack index={0} items={FRONTEND} label="Frontend" />
+      <TechStack index={1} items={BACKEND} label="Backend" />
+      <TechStack index={2} items={TESTING} label="Testing" />
+      <TechStack index={3} items={DATABASE} label="Database" />
+      <TechStack index={4} items={TOOLS} label="Tools" />
     </div>
   );
 }

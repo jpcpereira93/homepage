@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 import { Pill } from "@/components/Pill";
+import { useDelayedEntry } from "@/hooks";
 
 export type ProfessionalExperienceItemProps = {
   company: string;
@@ -23,23 +22,7 @@ export const ProfessionalExperienceItem = ({
   startDate,
   tech,
 }: ProfessionalExperienceItemProps) => {
-  const [isVisible, setIsVisible] = useState<boolean>(index === 0);
-
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
-    if (index > 0) {
-      timeoutId = setTimeout(() => {
-        setIsVisible(true);
-      }, index * 200);
-    }
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, [index]);
+  const isVisible = useDelayedEntry(index * 200);
 
   if (!isVisible) {
     return null;
