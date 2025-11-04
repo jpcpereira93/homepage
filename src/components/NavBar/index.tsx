@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, Home, Mail, Wrench } from "lucide-react";
+import { Briefcase, Folder, Home, Mail, Wrench } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { NavButton } from "@/components/NavButton";
@@ -32,6 +32,13 @@ export const NavBar = () => {
         tooltip="Experience"
       >
         <Briefcase />
+      </NavButton>
+      <NavButton
+        active={selectedSection === "projects"}
+        href="/know-me/projects"
+        tooltip="Projects"
+      >
+        <Folder />
       </NavButton>
       {/* <NavButton active={selectedSection === "contact"} href="/know-me/contact" tooltip="Contact me">
         <Mail />
